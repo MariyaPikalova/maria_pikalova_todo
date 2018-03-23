@@ -1,0 +1,10 @@
+@import '../variables';
+
+footer {
+  background-color: $container-bg;
+  text-align: center;
+  padding: $cont-padding;
+  margin-top: $cont-top-margin;
+  margin-bottom: 10px;
+  color: $main-color;
+}

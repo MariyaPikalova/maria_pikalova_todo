@@ -1,0 +1,14 @@
+@import "../variables";
+
+.main-wrap-side-bar {
+    background-color: $main-bg;
+    color: $main-color;
+    border: 1px solid #a2a2a2;
+    padding: $cont-content;
+    flex-direction: column;
+    flex: 1;
+}
+
+p {
+    margin-bottom: 50px;
+}
