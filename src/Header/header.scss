@@ -1,0 +1,10 @@
+@import '../variables';
+
+header {
+  background-color: $container-bg;
+  color: #ffffff;
+  padding:$cont-padding;
+  margin-top: $cont-top-margin;
+  display: flex;
+  justify-content: space-between;
+}
