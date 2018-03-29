@@ -14,11 +14,15 @@ const plugins = [
     title: 'Test app',
     template: 'index.html'
   }),
-  new webpack.HotModuleReplacementPlugin(),
-  new ExtractTextPlugin({
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin({
     filename: 'styles.css',
     allChunks: true
-  })
+  }),
+    new webpack.ProvidePlugin({
+        React: 'react',
+        Component: ['react', 'Component']
+    })
 ];
 
 module.exports = {
@@ -37,12 +41,12 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env', 'react'],
-            plugins: ['syntax-dynamic-import']
+            plugins: ['syntax-dynamic-import', 'transform-class-properties']
           }
         }
       },
 
-      {
+        {
         test: /\.s?css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -51,8 +55,16 @@ module.exports = {
             {loader: "sass-loader"}
           ]
         })
-      }
-
+      },
+        {
+            enforce: 'pre',
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader',
+            options: {
+            emitWarning: true
+          }
+        }
     ]
   },
 
@@ -63,6 +75,8 @@ module.exports = {
       chunks: 'all'
     },
   },
+
+  mode: 'development',
 
   devServer: {
     contentBase: path.resolve('dist'),
