@@ -4,14 +4,15 @@ export const Numbers = (props) => {
     numbers.push(i);
   }
   if (props.odd) {
-    numbers = numbers.filter(num => num % 2);
-  }
-  if (props.even) {
-    numbers.filter(num => !num % 2);
+    numbers = numbers.filter(num => num % 2 !== 0);
+  } else if (props.even) {
+    numbers = numbers.filter(num => num % 2 === 0);
+  } else if (!props.odd && !props.even) {
+    return null;
   }
 
   return (
-    <div className="side-bar-items">
+    <div>
       <ul>
         {numbers.map((num, i) => <li key={i}>{num}</li>)}
       </ul>

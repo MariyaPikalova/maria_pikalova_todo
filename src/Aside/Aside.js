@@ -27,6 +27,6 @@ export const Aside = () => (
       field='name'
       ordered */
     />
-    <Numbers from={5} to={13} odd />
+    <Numbers from={5} to={13} even />
   </aside>
 );
