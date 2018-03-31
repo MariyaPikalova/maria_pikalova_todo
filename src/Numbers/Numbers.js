@@ -7,8 +7,6 @@ export const Numbers = (props) => {
     numbers = numbers.filter(num => num % 2 !== 0);
   } else if (props.even) {
     numbers = numbers.filter(num => num % 2 === 0);
-  } else if (!props.odd && !props.even) {
-    return null;
   }
 
   return (
