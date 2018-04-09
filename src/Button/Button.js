@@ -12,7 +12,6 @@ export class Button extends Component {
     return (
       <div className="text">
         <button
-          id="active"
           onClick={this.makeToggle}
           className={this.state.class}
         >
