@@ -1,8 +1,9 @@
 import { Greeting } from '../Greeting';
 import { TodoBoard } from '../TodoBoard';
+import { Timer } from '../Timer';
 import './section.scss';
 
-export class Section extends React.Component {
+export class Section extends Component {
   state = {
     users: [],
     posts: []
@@ -26,6 +27,7 @@ export class Section extends React.Component {
     return (
       <React.Fragment>
         <section className="main-wrap-section">
+          <Timer />
           <Greeting name="User" />
           <TodoBoard />
           <br />
