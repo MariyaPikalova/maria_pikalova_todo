@@ -2,7 +2,6 @@ import { Form } from '../Form';
 import { Todos } from '../Todos';
 import { Button } from '../Button';
 import { TextEdit } from '../TextEdit';
-
 import './aside.scss';
 
 export const Aside = () => (
@@ -16,7 +15,6 @@ export const Aside = () => (
     <img src="./images/science.jpg" alt="science-img" />
     <br />
     <Todos />
-
   </aside>
 );
 
