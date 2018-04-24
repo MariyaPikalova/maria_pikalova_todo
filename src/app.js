@@ -1,15 +1,10 @@
 import ReactDom from 'react-dom';
-import { Header } from './Header';
-import { Main } from './Main';
-import { Footer } from './Footer';
-import './app.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { App } from './app.component.js';
 
-const component = (
-  <div className="container">
-    <h1>ROOT COMPONENT</h1>
-    <Header />
-    <Main />
-    <Footer />
-  </div>
+const Root = (
+  <Router>
+    <App />
+  </Router>
 );
-ReactDom.render(component, document.getElementById('app'));
+ReactDom.render(Root, document.getElementById('app'));

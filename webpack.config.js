@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const images = ['jpg', 'jpeg', 'png', 'gif', 'svg'];
 
 let stylesLoader = [
   {loader: 'style-loader'},
@@ -22,14 +24,18 @@ const plugins = [
     new webpack.ProvidePlugin({
         React: 'react',
         Component: ['react', 'Component']
-    })
+    }),
+  new CopyWebpackPlugin([
+    ...images.map(ext => ({ from: `**/*/*.${ext}`, to: 'images/[name].[ext]' }))
+  ])
 ];
 
 module.exports = {
   entry: './app.js',
   context: path.resolve('src'),
   output: {
-    filename: 'bundle-[name].js'
+    filename: 'bundle-[name].js',
+    publicPath: '/'
   },
 
   module: {
@@ -64,7 +70,19 @@ module.exports = {
             options: {
             emitWarning: true
           }
-        }
+        },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name].[ext]',
+              limit: 100
+            }
+          }
+        ]
+      }
     ]
   },
 
@@ -81,8 +99,9 @@ module.exports = {
   devServer: {
     contentBase: path.resolve('dist'),
     publicPath: '/',
-    port: 9000,
-    hot: true
+    port: 3000,
+    hot: true,
+    historyApiFallback: true
   }
 };
 

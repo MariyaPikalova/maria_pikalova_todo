@@ -9,11 +9,10 @@
 body {
   background-color:#fff ;
   color: #4e4544;
-  font: normal 16px sans-serif;
+  font-family:Tahoma, Geneva, sans-serif;
 }
 
 .container {
-  max-width: 90%;
   background-color: #eee;
   margin: 0 auto;
   padding: 0 60px;
@@ -22,3 +21,4 @@ body {
   flex-direction: column;
   text-align: center;
 }
+

@@ -35,7 +35,7 @@ export class TextEdit extends Component {
           type="text"
           onBlur={this.handleBlur}
           defaultValue={text}
-          ref={input => this.handleFocus(input)}
+          ref={this.handleFocus}
         />
         }
       </div>
