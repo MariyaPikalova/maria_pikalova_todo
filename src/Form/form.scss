@@ -1,0 +1,43 @@
+form {
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 5px;
+    }
+
+    input {
+      display: block;
+      min-width: 100px;
+      max-width: 100%;
+    }
+
+    input.correct {
+      border: 1px solid lawngreen;
+    }
+
+    input.error {
+      border: 1px solid red;
+    }
+
+    .error-text {
+      color: darkred;
+      font-size: 12px;
+      line-height: 2;
+    }
+  }
+
+  input {
+    display: block;
+  }
+
+  .error-text {
+    color: firebrick;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+}

@@ -1,0 +1,8 @@
+.text-edit {
+
+  input[type="text"]:focus {
+    color: white;
+    background-color: transparent;
+    border: 2px solid darkblue;
+  }
+}

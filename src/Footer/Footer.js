@@ -1,3 +1,8 @@
 import './footer.scss';
+import { Location } from '../Location';
 
-export const Footer = () => <footer>Apocalyptic girls, to the bridge.</footer>;
+export const Footer = () => (
+  <footer className="main-wrap location">
+    <Location />
+  </footer>
+);

@@ -1,12 +1,15 @@
 .main-nav {
-  background-color:  #b3d1ff;
-  color: #000000;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   align-items: baseline;
-  margin-right:10px;
+  margin: auto;
+  font-size: 25px;
+
+  li {
+    margin-right: 50px;
+  }
 }
 
-li {
-  margin-right: 50px;
+.active{
+  color: red;
 }

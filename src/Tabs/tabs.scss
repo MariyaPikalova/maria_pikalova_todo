@@ -1,0 +1,32 @@
+@import '../variables';
+
+  .nav-tab {
+    ul {
+      display: inline-block;
+      list-style: none;
+      background: rgba(66, 93, 255, 0.5);
+      border-radius: 5px;
+
+      li {
+        &.active a {
+          background: #aaa;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 7px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+

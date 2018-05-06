@@ -1,6 +1,3 @@
-import { Greeting } from '../Greeting';
-import { TodoBoard } from '../TodoBoard';
-import { Timer } from '../Timer';
 import './section.scss';
 
 export class Section extends Component {
@@ -15,21 +12,18 @@ export class Section extends Component {
       .then(users => this.setState({
         users: users.sort((prev, next) => prev.name > next.name)
       }));
-  }
+  };
 
   getUserPosts = (id) => {
     fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
       .then(data => data.json())
       .then(posts => this.setState({ posts }));
-  }
+  };
 
   render() {
     return (
       <React.Fragment>
         <section className="main-wrap-section">
-          <Timer />
-          <Greeting name="User" />
-          <TodoBoard />
           <br />
           <button onClick={this.getUsers}>Get users</button>
           <div className="user-block">

@@ -1,0 +1,31 @@
+.todo {
+  color: dodgerblue;
+
+  .completed {
+    text-decoration: line-through;
+    color: lightblue;
+  }
+  li {
+    list-style-type: none;
+  }
+  icon {
+    display: inline-block;
+    margin: 5px 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 21px;
+    width: 21px;
+  }
+  .done {
+    background: url('../images/done.png') no-repeat center;
+    background-size: cover;
+  }
+  .inprogress {
+    background: url('../images/inprogress.png') no-repeat center;
+    background-size: cover;
+  }
+ .delete {
+    background: url('../images/delete.png') no-repeat center;
+    background-size: cover;
+  }
+}

@@ -1,10 +1,17 @@
 @import '../variables';
 
-.main-wrap {
+.gallery {
   background-color: $container-bg;
   display: flex;
-  justify-content: center;
   border-radius: $border-rad;
+  //border: #4e4544;
   padding: $cont-padding;
   margin-top: $cont-top-margin;
+
+  img {
+    margin: auto;
+    padding: $cont-padding;
+    width: 270px;
+    height: 200px;
+  }
 }

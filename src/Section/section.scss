@@ -1,14 +1,16 @@
 @import "../variables";
 
 .main-wrap-section {
-  background-color: $main-bg;
+  background-color: dimgrey;
+  font-size: 18px;
   color: $main-color;
   padding: $cont-content;
-  margin-left: 10px;
+  border-radius: $border-rad;
   flex-direction: row;
   flex: 3;
 }
 .user-block {
-  padding: $aside-padding;
-  display: flex;
+  li{
+    list-style-type: none;
+  }
 }
